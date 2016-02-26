@@ -1,6 +1,4 @@
-# React
-
-[![Build Status](https://travis-ci.org/werein/elm.svg)](https://travis-ci.org/werein/elm) [![Code Climate](https://codeclimate.com/github/werein/elm/badges/gpa.svg)](https://codeclimate.com/github/werein/elm)
+# Elm
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
