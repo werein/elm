@@ -6,9 +6,6 @@ const stylesheetsLoader = ExtractTextPlugin.extract('style-loader',
   '!css-loader?modules&localIdentName=[path]-[local]-[hash:base64:3]');
 const stylesheetsPlugin = new ExtractTextPlugin('[hash].css');
 const htmlWebpackPlugin = new HtmlWebpackPlugin({ template: 'index.html' });
-const definePlugin = new webpack.DefinePlugin({
-  __DEV__: JSON.stringify(JSON.parse(process.env.NODE_ENV === 'development' || 'true'))
-});
 
 module.exports = {
   context: `${__dirname}/src`,
@@ -19,13 +16,14 @@ module.exports = {
   },
   devtool: 'source-map',
   debug: true,
-  plugins: [stylesheetsPlugin, htmlWebpackPlugin, definePlugin],
+  plugins: [stylesheetsPlugin, htmlWebpackPlugin],
   module: {
+    noParse: [/.elm$/],
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        test: /\.elm$/,
+        exclude: [/elm-stuff/, /node_modules/],
+        loader: 'elm-webpack'
       },
       { test: /\.css$/, loader: stylesheetsLoader },
       { test: /\.scss$/, loader: `${stylesheetsLoader}'!sass` },

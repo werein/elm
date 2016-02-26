@@ -1,13 +1,13 @@
 {
   "name": "react",
-  "description": "A React app using Express",
+  "description": "An Elm app using Express",
   "keywords": [
     "node",
-    "react",
+    "elm",
     "express"
   ],
-  "website": "https://wereinhq.com/guides/react",
-  "repository": "https://github.com/werein/react",
+  "website": "https://wereinhq.com/guides/elm",
+  "repository": "https://github.com/werein/elm",
   "success_url": "/",
   "env": {
     "PORT": {

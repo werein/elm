@@ -1,5 +1,6 @@
 # Ignore installed node modules
 node_modules
+elm-stuff
 
 # Ignore final files
 dist

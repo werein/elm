@@ -35,11 +35,12 @@ module.exports = {
     compressionPlugin
   ],
   module: {
+    noParse: [/.elm$/],
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
+        test: /\.elm$/,
+        exclude: [/elm-stuff/, /node_modules/],
+        loader: 'elm-webpack'
       },
       { test: /\.css$/, loader: stylesheetsLoader },
       { test: /\.scss$/, loader: `${stylesheetsLoader}'!sass` },
