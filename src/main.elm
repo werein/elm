@@ -1,5 +1,5 @@
-import Html
+import Html exposing (span, text)
+import Html.Attributes exposing (class)
 
-main : Html.Html
 main =
-  Html.text "Hello world"
+  span [class "welcome-message"] [text "Hello World!"]

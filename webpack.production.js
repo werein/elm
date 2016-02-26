@@ -3,8 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
-const stylesheetsLoader = ExtractTextPlugin.extract('style-loader',
-  '!css-loader?modules&localIdentName=[hash:base64]');
+const stylesheetsLoader = ExtractTextPlugin.extract('style-loader', '!css-loader');
 const stylesheetsPlugin = new ExtractTextPlugin('[hash].css');
 const htmlWebpackPlugin = new HtmlWebpackPlugin({ template: 'index.html' });
 const definePlugin = new webpack.DefinePlugin({

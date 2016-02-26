@@ -2,8 +2,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const stylesheetsLoader = ExtractTextPlugin.extract('style-loader',
-  '!css-loader?modules&localIdentName=[path]-[local]-[hash:base64:3]');
+const stylesheetsLoader = ExtractTextPlugin.extract('style-loader','!css-loader');
 const stylesheetsPlugin = new ExtractTextPlugin('[hash].css');
 const htmlWebpackPlugin = new HtmlWebpackPlugin({ template: 'index.html' });
 
