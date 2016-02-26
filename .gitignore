@@ -7,3 +7,6 @@ dist
 
 # Ignore logs
 npm-debug.log
+
+# Ignore temp file
+elm.js
